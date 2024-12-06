@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wms.mapper.ShoppingcartMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.wms.entity.Shoppingcart">
+        <result column="number" property="number" />
+        <result column="userid" property="userid" />
+        <result column="bookid" property="bookid" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        number, userid, bookid
+    </sql>
+
+    <select id="getCartByUserId" resultType="com.wms.entity.Shoppingcart">
+        SELECT * FROM shoppingcart WHERE userid = #{userid}
+    </select>
+
+<!--    <delete id="removeItemFromCart">
+        DELETE FROM shoppingcart WHERE userid = #{userid} AND bookid = #{bookid}
+    </delete>-->
+
+</mapper>

@@ -1,0 +1,18 @@
+server:
+  port: 8090
+  address: 0.0.0.0
+
+
+spring:
+  datasource:
+    url: jdbc:mysql://49.140.29.32:3306/weborder?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=GMT%2B8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: laplace
+    password: 111111
+
+Logging:
+  level:
+    com.wms: debug
+
+file:
+  upload-path: C:\Users\aaa\Desktop\SoftEngine\wms-web\src\assets\
